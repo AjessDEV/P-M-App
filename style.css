@@ -316,7 +316,7 @@ main {
 .pass-added {
     background-color: #1cdc56;
     padding: 12px 24px;
-    color: #f8f8f8;
+    color: #ededed;
     border-radius: 10px;
     font-size: 20px;
     position: fixed;
@@ -412,5 +412,47 @@ main {
 
     .a-p-form > input[type="text"] {
         font-size: 15px;
+    }
+
+    .pass-added {
+        font-size: 14px;
+        left: 8px;
+        padding: 10px;
+    }
+
+    @keyframes success {
+        0% {
+            top: 100%;
+            opacity: 0;
+        }
+    
+        50% {
+            top: 85%;
+            opacity: 1;
+        }
+    
+        75% {
+            top: 85%;
+            opacity: 1;
+        }
+    
+        100% {
+            top: 100%;
+            opacity: 0;
+        }
+    }
+
+    
+    .pv-container {
+        width: 300px;
+        height: 230px;
+    }
+    
+    .pv-container > h2 {
+        font-size: 15px;
+    }
+    .pv-container > h1 {
+        font-size: 25px;
+        color: #177ef5;
     }
 }
