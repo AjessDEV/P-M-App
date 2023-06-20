@@ -353,3 +353,64 @@ main {
         opacity: 0;
     }
 }
+
+/* MOBILE */
+
+@media (max-width: 720px) {
+    .navbar {
+        max-width: 280px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .passwords-container {
+        height: 300px;
+    }
+
+    main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 30px;
+    }
+
+    .pass-dashboard {
+        width: 300px;
+    }
+
+    .pass-platform {
+        font-size: 16px;
+    }
+    .pass-user {
+        font-size: 16px;
+    }
+    .view-p {
+        font-size: 25px;
+    }
+    .pass-platform::after {
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .pass-user::after {
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .view-p::after {
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .add-password-container {
+        width: 300px;
+    }
+    .ap-container > h1 {
+        font-size: 20px;
+    }
+
+    .a-p-form > input[type="text"] {
+        font-size: 15px;
+    }
+}
