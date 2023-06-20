@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+
+* {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+
+    --darkColor: #222;
+    --lightColor: #f2f2f2;
+}
+
+*::-webkit-scrollbar {
+    width: 0;
+    background: none;
+}
+
+
+body {
+    background-color: var(--darkColor);
+}
+
+.header {
+    width: 100%;
+    height: 80px;
+    background-color: #333;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    position: fixed;
+    z-index: 100000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.logo {
+    line-height: 80px;
+    font-size: 27px;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--lightColor);
+    pointer-events: none;
+    outline: none;
+}
+
+main {
+    position: relative;
+    top: 100px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+/* Dashboard */
+
+.pass-dashboard {
+    position: relative;
+    top: 0;
+    padding: 30px 0;
+    width: 800px;
+}
+.pass-dashboard > h1 {
+    color: var(--lightColor);
+}
+
+.passwords-container {
+    background-color: #444;
+    height: 600px;
+    padding: 18px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.password {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    background-color: #333;
+    animation-name: added;
+    animation-duration: 400ms;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+}
+
+@keyframes added {
+    0% {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+.pass-platform {
+    font-size: 23px;
+    color: var(--lightColor);
+    font-weight: 400;
+    color: #177ef5;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.pass-platform::after {
+    content: 'Plataforma';
+    position: absolute;
+    top: 190%;
+    font-size: 16px;
+    background-color: #177ef5;
+    color: #fff;
+    border-radius: 8px;
+    padding: 5px 15px;
+    transition: ease 200ms;
+    pointer-events: none;
+    opacity: 0;
+}
+.pass-platform:hover::after {
+    top: 150%;
+    opacity: 1;
+}
+
+.pass-user {
+    font-size: 23px;
+    color: var(--lightColor);
+    font-weight: 400;
+    color: #177ef5;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.pass-user::after {
+    content: 'Usuario';
+    position: absolute;
+    top: 190%;
+    font-size: 16px;
+    background-color: #177ef5;
+    color: #fff;
+    border-radius: 8px;
+    padding: 5px 15px;
+    transition: ease 200ms;
+    pointer-events: none;
+    opacity: 0;
+}
+.pass-user:hover::after {
+    top: 150%;
+    opacity: 1;
+}
+
+.view-p {
+    font-size: 30px;
+    background: none;
+    border: none;
+    transition: ease 200ms;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: end;
+    color: var(--lightColor);
+}
+.view-p:hover {
+    color: #177ef5;
+}
+.view-p::after {
+    content: 'Ver Contraseña';
+    position: absolute;
+    top: 190%;
+    right: -20px;
+    font-size: 16px;
+    background-color: #177ef5;
+    color: #fff;
+    width: 150px;
+    border-radius: 8px;
+    padding: 5px;
+    transition: ease 200ms;
+    pointer-events: none;
+    opacity: 0;
+}
+.view-p:hover::after {
+    top: 150%;
+    opacity: 1;
+}
+
+.password-view {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0000003d;
+    opacity: 0;
+    transition: ease 200ms;
+    pointer-events: none;
+}
+.password-view_active {
+    opacity: 1;
+    pointer-events: all;
+    
+}
+.pv-container {
+    width: 500px;
+    height: 300px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    z-index: 10;
+    position: relative;
+    top: 10%;
+    opacity: 0;
+    transition: ease 300ms;
+}
+.pv-container_active {
+    top: 0;
+    opacity: 1;
+}
+.pv-1 {
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.pv-close-btn {
+    padding: 10px 20px;
+    font-size: 30px;
+    border: none;
+    background: none;
+    color: #177ef5;
+    cursor: pointer;
+}
+
+.pv-container > h2 {
+    font-size: 20px;
+}
+.pv-container > h1 {
+    font-size: 40px;
+    color: #177ef5;
+}
+
+/* add password */
+
+.add-password-container {
+    width: 400px;
+}
+
+.ap-container {
+    background-color: #444;
+    border-radius: 10px;
+    padding: 20px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ap-container > h1 {
+    color: var(--lightColor);
+}
+
+.a-p-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.a-p-form > input[type="text"] {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    color: var(--lightColor);
+    background-color: var(--darkColor);
+    border: solid 2px #f8f8f800;
+    transition: ease 200ms;
+}
+.a-p-form > input[type="text"]:hover, input[type="text"]:focus {
+    border: solid 2px #f8f8f875;
+}
+
+.a-p-form > input[type="submit"] {
+    color: var(--lightColor);
+    background-color: #177ef5;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 0;
+    font-size: 18px;
+    margin-top: 20px;
+    transition: ease 200ms;
+    cursor: pointer;
+}
+.a-p-form > input[type="submit"]:hover {
+    background-color: #4095f7;
+    margin: 20px 20px 0 20px;
+}
+
+.pass-added {
+    background-color: #1cdc56;
+    padding: 12px 24px;
+    color: #f8f8f8;
+    border-radius: 10px;
+    font-size: 20px;
+    position: fixed;
+    top: 100%;
+    left: 62%;
+    box-shadow: 0 0 15px #17f55a3e;
+    transition: ease 300ms;
+    opacity: 0;
+    animation-name: success;
+    animation-duration: 2s;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+}
+
+@keyframes success {
+    0% {
+        top: 100%;
+        opacity: 0;
+    }
+
+    50% {
+        top: 88%;
+        opacity: 1;
+    }
+
+    75% {
+        top: 88%;
+        opacity: 1;
+    }
+
+    100% {
+        top: 100%;
+        opacity: 0;
+    }
+}

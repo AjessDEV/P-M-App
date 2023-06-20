@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Safe Room - Password Manager</title>
+    <link rel="shortcut icon" href="">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="logo">Safe Room</a>
+
+        </nav>
+    </header>
+
+    <main>
+        <div class="pass-dashboard">
+            
+        <h1>Contraseñas</h1>
+        <br><br>
+                <div class="passwords-container" id="passwords-container">
+        
+                    <!-- <div class="password">
+                        <h4 class="pass-platform">Youtube</h4>
+                        <h4 class="pass-user">AjessDEV</h4>
+                        <button class="view-p" id="viewPass"><i class="ti ti-eye-filled"></i></button>
+                        <div class="password-view">
+                            <div class="pv-container">
+                                <div class="pv-1">
+                                    <button class="pv-close-btn" id="pv-close-btn"><i class="ti ti-x"></i></button>
+                                </div>
+                                <h2>Tu Contraseña es:</h2>
+                                <br>
+                                <h1>123456789</h1>
+                            </div>
+                        </div>
+                        <button class="del-pass" id="del-pass-btn"><i class="ti ti-trash-x-filled"></i></button>
+                    </div> -->
+        
+                </div>
+        </div>
+
+        <div class="add-password-container">
+            <div class="ap-container">
+                <h1>Añadir Contraseña</h1>
+                <br>
+            <form class="a-p-form" id="adform">
+                <input id="platform" autocomplete="off" required type="text" placeholder="Plataforma">
+                <input id="user" autocomplete="off" required type="text" placeholder="Usuario">
+                <input id="pass" autocomplete="off" required type="text" placeholder="Contraseña">
+                <input type="submit" value="Añadir">
+            </form>
+
+            <!-- <p class="pass-added">Contraseña añadida satisfactoriamente.</p> -->
+            </div>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
